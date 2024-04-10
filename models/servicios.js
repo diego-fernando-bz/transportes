@@ -9,13 +9,13 @@ export function validateUser(user, password) {
 
     if (user == nombre && password == contraseña) {
         // si el usuario o contraseña son correctos
-        return  window.location.href='../views/Formulario.html'
+        return  window.location.href='../Formulario.html'
 
 
     } else {
         // si el usuario o contraseña no son correctos
         //return alert("no contraseña")
-        window.location.href='../views/Formulario.html'
+        window.location.href='../Formulario.html'
     }
 
 }
