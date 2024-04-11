@@ -5,14 +5,7 @@ const inputUser = document.getElementById('inputUser').value
 const inputPass = document.getElementById('passUser').value
 
 btnIngresar.addEventListener('click', function (e) {
-    
-validateUser(inputUser,inputPass)
-//window.location.href='../views/Formulario.html'
-
-    
-
-
-
+    redireccion()
 })
     
 
