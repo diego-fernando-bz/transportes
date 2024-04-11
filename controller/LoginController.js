@@ -1,11 +1,16 @@
 import { servis,validateUser,redireccion} from '../models/servicios.js'
 
 const btnIngresar = document.getElementById('btninisiar')
-const inputUser = document.getElementById('inputUser').value
-const inputPass = document.getElementById('passUser').value
+const inputUser = document.getElementById('inputUser').value.trim();
+const inputPass = document.getElementById('passUser').value.trim();
+var a = document.getElementById('link');
 
 btnIngresar.addEventListener('click', function (e) {
-    redireccion()
+    let us = "diego"
+    let pw ="123"
+
+a.href="../Formulario.html"
+
 })
     
 

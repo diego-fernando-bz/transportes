@@ -2,10 +2,10 @@ export function servis() {
     return "archivo servicios js en linea"
 }
 
-export function validateUser() {
+export function validateUser(a) {
 
-        return  window.location.href='../Formulario.html'
-    
+        return   a.href="../Formulario.html"
+        
 
 }
 
