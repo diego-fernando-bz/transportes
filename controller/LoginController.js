@@ -1,20 +1,28 @@
-import { servis,validateUser,redireccion} from '../models/servicios.js'
+import { servis, validateUser, redireccion } from '../models/servicios.js'
 
 const btnIngresar = document.getElementById('btninisiar')
-const inputUser = document.getElementById('inputUser').value.trim();
-const inputPass = document.getElementById('passUser').value.trim();
+
 var a = document.getElementById('link');
 
 btnIngresar.addEventListener('click', function (e) {
-    let us = "diego"
-    let pw ="123"
+  //por el momento us y pw son el usuario y la contraseña establecidos
+  
+  let us = "diego"
+  let pw = "123"
 
-a.href="../Formulario.html"
+  const inputUser = document.getElementById('inputUser').value.trim();
+  const inputPass = document.getElementById('passUser').value.trim();
+
+  if (us == inputUser && pw == inputPass) {
+    a.href = "../Formulario.html"
+  } else {
+    alert("contraseña es incorrecta")
+  }
 
 })
-    
 
-    
+
+
 
 
 
