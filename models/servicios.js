@@ -9,3 +9,7 @@ export function redireccion(){
         return window.location.href = '../Formulario.html'
 }
 
+/*
+las siguientes son las validasiones de las funciones  del formulario
+ */
+
