@@ -3,7 +3,6 @@
 function contarCheckboxes() {
     // Obtener todos los elementos de tipo checkbox en el DOM
     var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
     // Variable para contar la cantidad de checkboxes marcados
     var cantidadMarcados = 0;
 
@@ -13,13 +12,13 @@ function contarCheckboxes() {
         if (checkbox.checked) {
             cantidadMarcados++;
         }
-
     });
     alert("a marcado dos check " + cantidadMarcados)
 }
 function ocultarCheck() {
     var _formulario = document.getElementsByClassName("formulario")[0];
     _formulario.style.display = "none";
+
     var _salida = document.getElementsByClassName("salida")[0];
     _salida.style.display = "block";
 
@@ -28,7 +27,7 @@ function ocultarCheck() {
 }
 //var check = document.getElementsByClassName('checkImportant');
 
-function mostrarTransitar(){
+function mostrarTransitar() {
     document.getElementById("transitar").style.display = "block";
     document.getElementById("notransitar").style.display = "none";
 }
@@ -45,7 +44,7 @@ function salir() {
 }
 
 // Obtener referencia al botón de verificación y agregar un evento clic
-//var check = document.querySelectorAll(".noImportant");
+
 
 
 var checkboxes = document.querySelectorAll('.noImportant');
@@ -59,13 +58,11 @@ function alMenosUnoSeleccionado() {
     }
     return false;
 }
-
 function actualizarBotonContinuar() {
     botonContinuar.disabled = !alMenosUnoSeleccionado();
 }
-
-checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener('change', function() {
+checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('change', function () {
         actualizarBotonContinuar();
     });
 });
@@ -82,8 +79,8 @@ var btn = document.getElementById("enviar").addEventListener("click", function (
         }
     });
 
-//-------------------
-    if (algunNoSeleccionado ) {
+    //-------------------
+    if (algunNoSeleccionado) {
         //alert("Por favor, selecciona todos los checkboxes importantes antes de enviar.");
         // Devuelve true o realiza alguna acción adicional
         var boton = document.getElementById("enviar").addEventListener("click", ocultarCheck);
@@ -92,12 +89,10 @@ var btn = document.getElementById("enviar").addEventListener("click", function (
         return true;
     } else {
         var boton = document.getElementById("enviar").addEventListener("click", ocultarCheck);
-    mostrarTransitar()
+        mostrarTransitar()
         // alert("¡Todos los checkboxes importantes están seleccionados!");
         return false;
     }
 });
-
-
 var botonSalir = document.getElementById("exit").addEventListener("click", salir);
 var check = document.getElementsByClassName('checkImportant');
